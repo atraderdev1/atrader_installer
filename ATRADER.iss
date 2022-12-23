@@ -5,7 +5,7 @@
 
 [Setup]
 AppName=ATRADER
-AppVersion=3.0.0
+AppVersion=3.0.1
 WizardStyle=modern
 DefaultDirName={autopf}\ATRADER
 DefaultGroupName=ATRADER
@@ -33,14 +33,13 @@ Source: "D:\DEV\ATRADER_RELEASE\CrashRpt.DLL"; DestDir: "{app}"
 Source: "D:\DEV\ATRADER_RELEASE\xml\*.*"; DestDir: "{userdocs}\atrader\xml"
 Source: "D:\DEV\ATRADER_RELEASE\cert\*.*"; DestDir: "{userdocs}\atrader\cert"
 Source: "D:\DEV\ATRADER_RELEASE\dat\ib\*.*"; DestDir: "{userdocs}\atrader\dat\ib"
-Source: "D:\DEV\ATRADER_RELEASE\dat\dtn\*.*"; DestDir: "{userdocs}\atrader\dat\dtn"
 Source: "D:\DEV\ATRADER_RELEASE\data\historical\bar\*.*"; DestDir: "{userdocs}\atrader\data\historical\bar"
 Source: "D:\DEV\ATRADER_RELEASE\data\historical\gap\*.*"; DestDir: "{userdocs}\atrader\data\historical\gap"
 Source: "D:\DEV\ATRADER_RELEASE\data\historical\profile\*.*"; DestDir: "{userdocs}\atrader\data\historical\profile"
-Source: "D:\DEV\ATRADER_RELEASE\data\instruments\*.*"; DestDir: "{userdocs}\atrader\instruments"
+Source: "D:\DEV\ATRADER_RELEASE\instruments\*.*"; DestDir: "{userdocs}\atrader\instruments"
 Source: "D:\DEV\ATRADER_RELEASE\quoteboards\*.*"; DestDir: "{userdocs}\atrader\data"
 Source: "D:\DEV\ATRADER_RELEASE\ext\*.*"; DestDir: "{userdocs}\atrader\ext"
-Source: "D:\DEV\ATRADER_RELEASE\log\applog.txt"; DestDir: "{userdocs}\atrader\log\applog.txt"
+Source: "D:\DEV\ATRADER_RELEASE\log\*.*"; DestDir: "{userdocs}\atrader\log"
 Source: "D:\DEV\ATRADER_RELEASE\strategies\*.*"; DestDir: "{userdocs}\atrader\strategies"
 Source: "D:\DEV\ATRADER_RELEASE\Readme2.txt"; DestDir: "{app}"; Flags: isreadme
 
@@ -51,9 +50,10 @@ Name: "{autodesktop}\ATRADER"; Filename: "{app}\TRADER.exe"
 [Registry]
 Root: HKCU; Subkey: "Software\ATRADER\"; Flags: uninsdeletekey
 Root: HKCU; Subkey: "Software\Autotrader\"; Flags: uninsdeletekey
-Root: HKCU; Subkey: "Software\ATRADER\"; ValueType: string; ValueName: "Version"; ValueData: "3.0.0"; Flags: uninsdeletekey
-Root: HKCU; Subkey: "Software\ATRADER\Atrader Interactive Charting"; ValueType: string; ValueName: "Version"; ValueData: "3.00";Flags: uninsdeletekey 
+Root: HKCU; Subkey: "Software\ATRADER\"; ValueType: string; ValueName: "Version"; ValueData: "3.0.1"; Flags: uninsdeletekey
+Root: HKCU; Subkey: "Software\ATRADER\Atrader Interactive Charting"; ValueType: string; ValueName: "Version"; ValueData: "3.0.1";Flags: uninsdeletekey 
 Root: HKCU; Subkey: "Software\ATRADER\Files\"; ValueType: string; ValueName: "RootPath"; ValueData: "{userdocs}\atrader";Flags: uninsdeletekey 
-Root: HKCU; Subkey: "Software\ATRADER\InstallDir\"; ValueType: string; ValueName: "RootPath"; ValueData: "{app}";Flags: uninsdeletekey 
+Root: HKCU; Subkey: "Software\ATRADER\InstallDir\"; ValueType: string; ValueName: "RootPath"; ValueData: "{app}";Flags: uninsdeletekey
+Root: HKCU; Subkey: "Software\ATRADER\Others\"; ValueType: string; ValueName: "DefaultFuturesMonth"; ValueData: "202203";Flags: uninsdeletekey  
 Root: HKCU; Subkey: "Software\ATRADER\"; ValueType: dword; ValueName: "Initialised"; ValueData: "0"; Flags: uninsdeletekey
                                                                                          
