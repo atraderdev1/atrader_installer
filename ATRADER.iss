@@ -5,7 +5,7 @@
 
 [Setup]
 AppName=ATRADER
-AppVersion=3.0.1
+AppVersion=3.0.1.2
 WizardStyle=modern
 DefaultDirName={autopf}\ATRADER
 DefaultGroupName=ATRADER
@@ -50,8 +50,8 @@ Name: "{autodesktop}\ATRADER"; Filename: "{app}\TRADER.exe"
 [Registry]
 Root: HKCU; Subkey: "Software\ATRADER\"; Flags: uninsdeletekey
 Root: HKCU; Subkey: "Software\Autotrader\"; Flags: uninsdeletekey
-Root: HKCU; Subkey: "Software\ATRADER\"; ValueType: string; ValueName: "Version"; ValueData: "3.0.1"; Flags: uninsdeletekey
-Root: HKCU; Subkey: "Software\ATRADER\Atrader Interactive Charting"; ValueType: string; ValueName: "Version"; ValueData: "3.0.1";Flags: uninsdeletekey 
+Root: HKCU; Subkey: "Software\ATRADER\"; ValueType: string; ValueName: "Version"; ValueData: "3.0.1.2"; Flags: uninsdeletekey
+Root: HKCU; Subkey: "Software\ATRADER\Atrader Interactive Charting"; ValueType: string; ValueName: "Version"; ValueData: "3.0.1.2";Flags: uninsdeletekey 
 Root: HKCU; Subkey: "Software\ATRADER\Files\"; ValueType: string; ValueName: "RootPath"; ValueData: "{userdocs}\atrader";Flags: uninsdeletekey 
 Root: HKCU; Subkey: "Software\ATRADER\InstallDir\"; ValueType: string; ValueName: "RootPath"; ValueData: "{app}";Flags: uninsdeletekey
 Root: HKCU; Subkey: "Software\ATRADER\Others\"; ValueType: string; ValueName: "DefaultFuturesMonth"; ValueData: "202203";Flags: uninsdeletekey  
