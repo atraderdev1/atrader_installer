@@ -7,6 +7,7 @@
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
     <ROW Property="AI_CURRENT_YEAR" Value="2023" ValueLocId="-"/>
     <ROW Property="AI_PACKAGING_TOOL" Value="Advanced Installer 20.3.2 build 850835f9" ValueLocId="-"/>
+    <ROW Property="AI_PROPPATH_PERBUILD_readme2.txt" Value="..\atrader_release" MultiBuildValue="DefaultBuild:..\..\dev\atrader_release"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="CTRLS" Value="1"/>
@@ -14,7 +15,7 @@
     <ROW Property="ProductCode" Value="2057:{BA3379A5-68E3-4AA5-BBFD-FA5083E849A2} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="ATRADER"/>
-    <ROW Property="ProductVersion" Value="3.1"/>
+    <ROW Property="ProductVersion" Value="3.1.5"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{E4C62E4C-DD72-4F44-93D2-A225B238FE9D}"/>
     <ROW Property="VIEWREADME" Value="1" Type="4"/>
@@ -51,177 +52,187 @@
     <ROW Directory="historical_Dir" Directory_Parent="data_Dir" DefaultDir="HISTOR~1|historical"/>
     <ROW Directory="log_Dir" Directory_Parent="atrader_Dir" DefaultDir="log"/>
     <ROW Directory="profile_Dir" Directory_Parent="historical_Dir" DefaultDir="profile"/>
-    <ROW Directory="quoteboards_Dir" Directory_Parent="cert_Dir" DefaultDir="QUOTEB~1|quoteboards"/>
+    <ROW Directory="quoteboards_Dir" Directory_Parent="atrader_Dir" DefaultDir="QUOTEB~1|quoteboards"/>
     <ROW Directory="strategies_Dir" Directory_Parent="atrader_Dir" DefaultDir="STRATE~1|strategies"/>
     <ROW Directory="xml_Dir" Directory_Parent="atrader_Dir" DefaultDir="xml"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" ComponentId="{A0120328-4F94-4AD6-B68A-1824696A78DD}" Directory_="profile_Dir" Attributes="0" KeyPath="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" Type="0"/>
-    <ROW Component="AMEX.txt" ComponentId="{4A396067-CA3C-4B93-83C7-8650DF340D1B}" Directory_="Instruments_Dir" Attributes="0" KeyPath="AMEX.txt" Type="0"/>
+    <ROW Component="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" ComponentId="{7BC1F38F-E067-40BF-A9B5-1D7E22DA0409}" Directory_="profile_Dir" Attributes="0" KeyPath="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" Type="0"/>
+    <ROW Component="AMEX.txt" ComponentId="{DA130F96-0796-4825-A875-9AEED8042FF6}" Directory_="Instruments_Dir" Attributes="0" KeyPath="AMEX.txt" Type="0"/>
     <ROW Component="APPDIR" ComponentId="{3B406484-4FB6-4A96-9E43-26CA57BD0FD4}" Directory_="APPDIR" Attributes="0"/>
     <ROW Component="ATRADER" ComponentId="{2D9B44B9-7D2D-46E9-9DCF-E2AADF7968F6}" Directory_="APPDIR" Attributes="4" KeyPath="ATRADER"/>
     <ROW Component="Admin" ComponentId="{DB8395D8-B1B4-4FCD-B0C8-DDA157BDD8BB}" Directory_="APPDIR" Attributes="4" KeyPath="Admin"/>
-    <ROW Component="AlgoDefinitions.xml" ComponentId="{B2B762D5-E411-496F-874D-8C959AD571DD}" Directory_="xml_Dir" Attributes="0" KeyPath="AlgoDefinitions.xml" Type="0"/>
-    <ROW Component="CPPTABackFillServerAPI.dll" ComponentId="{CAED396B-EDE9-4488-A166-A84585351B48}" Directory_="APPDIR" Attributes="0" KeyPath="CPPTABackFillServerAPI.dll"/>
-    <ROW Component="CrashRpt.dll" ComponentId="{475BBA9B-3825-4C3B-B660-59560CB2633A}" Directory_="APPDIR" Attributes="0" KeyPath="CrashRpt.dll"/>
-    <ROW Component="CrashSender.exe" ComponentId="{273D71E9-4980-4B7C-A215-F4C12D3CEBAC}" Directory_="APPDIR" Attributes="0" KeyPath="CrashSender.exe"/>
-    <ROW Component="DBGHELP.DLL" ComponentId="{EA767F9E-CA66-4F9E-AFAF-F936C7E222D6}" Directory_="APPDIR" Attributes="0" KeyPath="DBGHELP.DLL"/>
-    <ROW Component="DOW_DTN.xml" ComponentId="{FB07FB9C-395F-453F-970A-92F93D1E7027}" Directory_="quoteboards_Dir" Attributes="0" KeyPath="DOW_DTN.xml" Type="0"/>
+    <ROW Component="AlgoDefinitions.xml" ComponentId="{0B6169AD-92F9-4512-A5E4-6C05BE1412AB}" Directory_="xml_Dir" Attributes="0" KeyPath="AlgoDefinitions.xml" Type="0"/>
+    <ROW Component="CPPTABackFillServerAPI.dll" ComponentId="{A4C047E2-22BC-4475-BEF5-D30E64DD53F8}" Directory_="APPDIR" Attributes="0" KeyPath="CPPTABackFillServerAPI.dll"/>
+    <ROW Component="CrashRpt.dll" ComponentId="{CC60B21C-0BA2-4954-A1BF-BF57A865634D}" Directory_="APPDIR" Attributes="0" KeyPath="CrashRpt.dll"/>
+    <ROW Component="CrashSender.exe" ComponentId="{78D5A57E-F41B-4B68-A175-2D9186A3F200}" Directory_="APPDIR" Attributes="0" KeyPath="CrashSender.exe"/>
+    <ROW Component="DBGHELP.DLL" ComponentId="{43246F2D-423D-4CF7-A3E1-657081287782}" Directory_="APPDIR" Attributes="0" KeyPath="DBGHELP.DLL"/>
+    <ROW Component="DOW_DTN.xml" ComponentId="{CFCAB4F1-9FD6-4ABC-96AD-A0FF69EEBB3B}" Directory_="quoteboards_Dir" Attributes="0" KeyPath="DOW_DTN.xml" Type="0"/>
     <ROW Component="DefaultFuturesMonth" ComponentId="{F9B08B5E-B0D8-42F5-B09C-CC9CEAE2F783}" Directory_="APPDIR" Attributes="4" KeyPath="DefaultFuturesMonth"/>
-    <ROW Component="ES_GlobexSession.gaps" ComponentId="{1C71E5B5-6904-48FC-BCB4-A0DF53A9D3A7}" Directory_="gap_Dir" Attributes="0" KeyPath="ES_GlobexSession.gaps" Type="0"/>
-    <ROW Component="IB_tradersettings.dat" ComponentId="{670937A6-5E6B-479A-ADED-BF9F29760B45}" Directory_="IB_Dir" Attributes="0" KeyPath="IB_tradersettings.dat" Type="0"/>
-    <ROW Component="INTRA_20Day_ES_GlobexSession_IB.bar" ComponentId="{1BBA5CE6-5079-4B05-9FA3-19B1D7B61BB1}" Directory_="bar_Dir" Attributes="0" KeyPath="INTRA_20Day_ES_GlobexSession_IB.bar" Type="0"/>
+    <ROW Component="ES_GlobexSession.gaps" ComponentId="{0095DD01-334C-427F-B3C6-5E1C5C5B5181}" Directory_="gap_Dir" Attributes="0" KeyPath="ES_GlobexSession.gaps" Type="0"/>
+    <ROW Component="IB_tradersettings.dat" ComponentId="{215086EC-8A22-40D3-AF7E-29325543C1F8}" Directory_="IB_Dir" Attributes="0" KeyPath="IB_tradersettings.dat" Type="0"/>
+    <ROW Component="INTRA_20Day_ES_GlobexSession_IB.bar" ComponentId="{D3A759C6-4C7D-4943-8AEB-B8535B843903}" Directory_="bar_Dir" Attributes="0" KeyPath="INTRA_20Day_ES_GlobexSession_IB.bar" Type="0"/>
     <ROW Component="Initialised" ComponentId="{9AEA265C-D42B-43CB-9B94-9CE9FBFBDA9D}" Directory_="APPDIR" Attributes="4" KeyPath="Initialised"/>
-    <ROW Component="MSVCRTD.DLL" ComponentId="{DF9ADBB6-8065-43DD-AD0C-FAC158AB851A}" Directory_="APPDIR" Attributes="0" KeyPath="MSVCRTD.DLL"/>
+    <ROW Component="MSVCRTD.DLL" ComponentId="{32846DC9-3B38-4912-995C-90453B2B1161}" Directory_="APPDIR" Attributes="0" KeyPath="MSVCRTD.DLL"/>
     <ROW Component="QuickLaunch" ComponentId="{CDD84D11-A994-4016-BBE6-9A44DB2EF84B}" Directory_="QuickLaunch_Dir" Attributes="0"/>
     <ROW Component="RootPath" ComponentId="{F83D3063-E428-4861-80A9-72BD58C053CF}" Directory_="APPDIR" Attributes="4" KeyPath="RootPath"/>
-    <ROW Component="SHORTCUTDIR" ComponentId="{E0AD8558-E361-4157-A759-A2973E499965}" Directory_="SHORTCUTDIR" Attributes="0"/>
-    <ROW Component="TAPriceEngineAPI.dll" ComponentId="{210E25FD-6A67-4701-9798-6332888A3681}" Directory_="APPDIR" Attributes="0" KeyPath="TAPriceEngineAPI.dll"/>
-    <ROW Component="Trader.exe" ComponentId="{A079C646-34D5-4ED6-86D5-B0DEB23B4CE2}" Directory_="APPDIR" Attributes="0" KeyPath="Trader.exe"/>
-    <ROW Component="UT.dll" ComponentId="{B74A9170-C81A-4F46-AC03-9BD12E8EAEBD}" Directory_="APPDIR" Attributes="0" KeyPath="UT.dll"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{8853128C-4EAA-4E92-94B3-9F30B96A1853}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="TAPriceEngineAPI.dll" ComponentId="{AD0A45CB-5991-4F41-905D-48D3AC529BB1}" Directory_="APPDIR" Attributes="0" KeyPath="TAPriceEngineAPI.dll"/>
+    <ROW Component="Trader.exe" ComponentId="{5DF4A024-BC9B-46EA-AD28-6B464DFE11D2}" Directory_="APPDIR" Attributes="0" KeyPath="Trader.exe"/>
+    <ROW Component="UT.dll" ComponentId="{1C4717F9-79F0-4745-B4DD-83730AE0671D}" Directory_="APPDIR" Attributes="0" KeyPath="UT.dll"/>
     <ROW Component="Versions" ComponentId="{7B12437E-EDCB-401C-9EDB-2E62CAB06198}" Directory_="APPDIR" Attributes="4" KeyPath="Versions"/>
-    <ROW Component="aesc.dll" ComponentId="{B8C73B61-00A0-4AE3-AB7D-E6A16F5E45CA}" Directory_="APPDIR" Attributes="0" KeyPath="aesc.dll"/>
-    <ROW Component="applog.txt" ComponentId="{9A23C9E8-A470-4DD6-B659-22BCD9B92E6D}" Directory_="log_Dir" Attributes="0" KeyPath="applog.txt" Type="0"/>
-    <ROW Component="atlutils.dll" ComponentId="{1D3BFDDF-F0D5-4B1A-869E-792E958FDBA7}" Directory_="APPDIR" Attributes="0" KeyPath="atlutils.dll"/>
-    <ROW Component="auth.cert" ComponentId="{B9B5EBC1-E12E-4A27-B557-E7A4E83A6C39}" Directory_="cert_Dir" Attributes="0" KeyPath="auth.cert" Type="0"/>
-    <ROW Component="autotraderdisclaimer.doc" ComponentId="{012F3D50-818C-42DB-A871-4BA8C74CE3BA}" Directory_="APPDIR" Attributes="0" KeyPath="autotraderdisclaimer.doc" Type="0"/>
-    <ROW Component="boost_threadvc90mt1_39.dll" ComponentId="{EDB0F182-C4D9-4697-95CF-486F1E9DFAA4}" Directory_="APPDIR" Attributes="0" KeyPath="boost_threadvc90mt1_39.dll"/>
-    <ROW Component="buy_3leg.str" ComponentId="{19091B0A-F5A5-4CF5-ABD9-F4B48FDD7343}" Directory_="strategies_Dir" Attributes="0" KeyPath="buy_3leg.str" Type="0"/>
-    <ROW Component="colours.h" ComponentId="{37F2BCD7-2623-43EB-975E-55EAA8F1A8A7}" Directory_="ext_Dir" Attributes="0" KeyPath="colours.h" Type="0"/>
-    <ROW Component="crashcon.exe" ComponentId="{738D8D06-FD55-45B7-94F0-3D46A1A01841}" Directory_="APPDIR" Attributes="0" KeyPath="crashcon.exe"/>
-    <ROW Component="datafeed.dll" ComponentId="{77FF8EE4-46A4-437C-9F4E-629BA35A42AA}" Directory_="APPDIR" Attributes="0" KeyPath="datafeed.dll"/>
-    <ROW Component="ext.dll" ComponentId="{BF077ADC-8864-4D19-954B-C0DC12008EAC}" Directory_="APPDIR" Attributes="0" KeyPath="ext.dll"/>
-    <ROW Component="msvcrt.dll" ComponentId="{197D2F1C-CE11-4A83-A296-D711260774E8}" Directory_="APPDIR" Attributes="0" KeyPath="msvcrt.dll"/>
-    <ROW Component="msxml4.dll" ComponentId="{FC577811-D663-402C-BCF4-DEDF1FA2F95B}" Directory_="APPDIR" Attributes="0" KeyPath="msxml4.dll"/>
-    <ROW Component="readme.txt" ComponentId="{7E3D5030-AD09-4C92-8F1B-0E2A1C6C5885}" Directory_="crashreports_Dir" Attributes="0" KeyPath="readme.txt" Type="0"/>
-    <ROW Component="util.dll" ComponentId="{F940450B-B058-4477-B8C7-0934DFF0B345}" Directory_="APPDIR" Attributes="0" KeyPath="util.dll"/>
-    <ROW Component="xercesc_3_0.dll" ComponentId="{3DD9ED30-9A62-4A34-84A4-24701E507CA6}" Directory_="APPDIR" Attributes="0" KeyPath="xercesc_3_0.dll"/>
-    <ROW Component="zlib1.dll" ComponentId="{954A4890-C3AC-4036-A8DC-7CBE82725C7A}" Directory_="APPDIR" Attributes="0" KeyPath="zlib1.dll"/>
-    <ROW Component="zlibwapi.dll" ComponentId="{2FCF98B8-FAFE-4143-A13B-EDA8B907EB14}" Directory_="APPDIR" Attributes="0" KeyPath="zlibwapi.dll"/>
+    <ROW Component="aesc.dll" ComponentId="{2574E6E7-58E1-434C-B0B0-07C5C6533855}" Directory_="APPDIR" Attributes="0" KeyPath="aesc.dll"/>
+    <ROW Component="applog.txt" ComponentId="{BA243E35-AE97-41F1-AD2E-6A08D716093E}" Directory_="log_Dir" Attributes="0" KeyPath="applog.txt" Type="0"/>
+    <ROW Component="atlutils.dll" ComponentId="{A2C708AA-8784-43B9-8F0B-180E87636802}" Directory_="APPDIR" Attributes="0" KeyPath="atlutils.dll"/>
+    <ROW Component="atrader" ComponentId="{BB30BB17-91DD-440B-AABC-A3167DE84C7F}" Directory_="atrader_Dir" Attributes="0"/>
+    <ROW Component="auth.cert" ComponentId="{9FE00EEF-494E-445E-815E-9D26B9706F92}" Directory_="cert_Dir" Attributes="0" KeyPath="auth.cert" Type="0"/>
+    <ROW Component="autotraderdisclaimer.doc" ComponentId="{012F3D50-818C-42DB-A871-4BA8C74CE3BA}" Directory_="APPDIR" Attributes="0" KeyPath="readme2.txt" Type="0"/>
+    <ROW Component="boost_threadvc90mt1_39.dll" ComponentId="{347D43AE-60A6-4B40-B4C9-8737C3DD0C63}" Directory_="APPDIR" Attributes="0" KeyPath="boost_threadvc90mt1_39.dll"/>
+    <ROW Component="buy_3leg.str" ComponentId="{A4276F7D-D55B-4EFA-89E5-670A7D3A1D8C}" Directory_="strategies_Dir" Attributes="0" KeyPath="buy_3leg.str" Type="0"/>
+    <ROW Component="colours.h" ComponentId="{C52EBC4B-8170-4E35-9C6A-3AB7EA9BD926}" Directory_="ext_Dir" Attributes="0" KeyPath="colours.h" Type="0"/>
+    <ROW Component="crashcon.exe" ComponentId="{5FEBD141-4579-4ADA-8ED4-F04E183265A0}" Directory_="APPDIR" Attributes="0" KeyPath="crashcon.exe"/>
+    <ROW Component="datafeed.dll" ComponentId="{D166AC32-07A1-48BC-9187-319410887710}" Directory_="APPDIR" Attributes="0" KeyPath="datafeed.dll"/>
+    <ROW Component="ext.dll" ComponentId="{C5457DF0-92D4-437E-8B0C-F668570057B0}" Directory_="APPDIR" Attributes="0" KeyPath="ext.dll"/>
+    <ROW Component="msvcrt.dll" ComponentId="{C76A19AE-1D35-49BE-BFE2-34205A58A082}" Directory_="APPDIR" Attributes="0" KeyPath="msvcrt.dll"/>
+    <ROW Component="msxml4.dll" ComponentId="{B5F5F514-2A31-476F-BEEF-0254EF460FDD}" Directory_="APPDIR" Attributes="0" KeyPath="msxml4.dll"/>
+    <ROW Component="readme.txt" ComponentId="{F4788B7B-F7E1-4C16-B03E-3FA04D29EE58}" Directory_="crashreports_Dir" Attributes="0" KeyPath="readme.txt" Type="0"/>
+    <ROW Component="util.dll" ComponentId="{A4FCB0CE-DA44-4AD9-A2D8-0DDD0A185D57}" Directory_="APPDIR" Attributes="0" KeyPath="util.dll"/>
+    <ROW Component="xercesc_3_0.dll" ComponentId="{3D2BD150-D7F2-4B97-9A5C-8DD2FA0B3C39}" Directory_="APPDIR" Attributes="0" KeyPath="xercesc_3_0.dll"/>
+    <ROW Component="zlib1.dll" ComponentId="{33399600-6895-4C27-9725-D9E7DBC8148A}" Directory_="APPDIR" Attributes="0" KeyPath="zlib1.dll"/>
+    <ROW Component="zlibwapi.dll" ComponentId="{4F39F47B-B45E-4088-83C0-998DD0D590B3}" Directory_="APPDIR" Attributes="0" KeyPath="zlibwapi.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
-    <ROW File="aesc.dll" Component_="aesc.dll" FileName="aesc.dll" Attributes="0" SourcePath="..\atrader_release\aesc.dll" SelfReg="false"/>
-    <ROW File="atlutils.dll" Component_="atlutils.dll" FileName="atlutils.dll" Attributes="0" SourcePath="..\atrader_release\atlutils.dll" SelfReg="false"/>
-    <ROW File="autotraderdisclaimer.doc" Component_="autotraderdisclaimer.doc" FileName="AUTOTR~1.DOC|autotraderdisclaimer.doc" Attributes="0" SourcePath="..\atrader_release\autotraderdisclaimer.doc" SelfReg="false"/>
-    <ROW File="boost_threadvc90mt1_39.dll" Component_="boost_threadvc90mt1_39.dll" FileName="BOOST_~1.DLL|boost_thread-vc90-mt-1_39.dll" Attributes="0" SourcePath="..\atrader_release\boost_thread-vc90-mt-1_39.dll" SelfReg="false"/>
-    <ROW File="CPPTABackFillServerAPI.dll" Component_="CPPTABackFillServerAPI.dll" FileName="CPPTAB~1.DLL|CPPTABackFillServerAPI.dll" Attributes="0" SourcePath="..\atrader_release\CPPTABackFillServerAPI.dll" SelfReg="false"/>
-    <ROW File="crashcon.exe" Component_="crashcon.exe" FileName="crashcon.exe" Attributes="0" SourcePath="..\atrader_release\crashcon.exe" SelfReg="false" DigSign="true"/>
-    <ROW File="CrashRpt.dll" Component_="CrashRpt.dll" FileName="CrashRpt.dll" Attributes="0" SourcePath="..\atrader_release\CrashRpt.dll" SelfReg="false"/>
-    <ROW File="CrashSender.exe" Component_="CrashSender.exe" FileName="CRASHS~1.EXE|CrashSender.exe" Attributes="0" SourcePath="..\atrader_release\CrashSender.exe" SelfReg="false" DigSign="true"/>
-    <ROW File="datafeed.dll" Component_="datafeed.dll" FileName="datafeed.dll" Attributes="0" SourcePath="..\atrader_release\datafeed.dll" SelfReg="false"/>
-    <ROW File="DBGHELP.DLL" Component_="DBGHELP.DLL" FileName="DBGHELP.DLL" Attributes="0" SourcePath="..\atrader_release\DBGHELP.DLL" SelfReg="false"/>
-    <ROW File="DeleteWorkspaces.bat" Component_="autotraderdisclaimer.doc" FileName="DELETE~1.BAT|DeleteWorkspaces.bat" Attributes="0" SourcePath="..\atrader_release\DeleteWorkspaces.bat" SelfReg="false"/>
-    <ROW File="emini_manual.doc" Component_="autotraderdisclaimer.doc" FileName="EMINI_~1.DOC|emini_manual.doc" Attributes="0" SourcePath="..\atrader_release\emini_manual.doc" SelfReg="false"/>
-    <ROW File="emini_manual.pdf" Component_="autotraderdisclaimer.doc" FileName="EMINI_~1.PDF|emini_manual.pdf" Attributes="0" SourcePath="..\atrader_release\emini_manual.pdf" SelfReg="false"/>
-    <ROW File="eula.txt" Component_="autotraderdisclaimer.doc" FileName="eula.txt" Attributes="0" SourcePath="..\atrader_release\eula.txt" SelfReg="false"/>
-    <ROW File="ext.dll" Component_="ext.dll" FileName="ext.dll" Attributes="0" SourcePath="..\atrader_release\ext.dll" SelfReg="false"/>
-    <ROW File="manual.doc" Component_="autotraderdisclaimer.doc" FileName="manual.doc" Attributes="0" SourcePath="..\atrader_release\manual.doc" SelfReg="false"/>
-    <ROW File="manual.pdf" Component_="autotraderdisclaimer.doc" FileName="manual.pdf" Attributes="0" SourcePath="..\atrader_release\manual.pdf" SelfReg="false"/>
-    <ROW File="mmath.xls" Component_="autotraderdisclaimer.doc" FileName="mmath.xls" Attributes="0" SourcePath="..\atrader_release\mmath.xls" SelfReg="false"/>
-    <ROW File="msvcrt.dll" Component_="msvcrt.dll" FileName="msvcrt.dll" Attributes="0" SourcePath="..\atrader_release\msvcrt.dll" SelfReg="false"/>
-    <ROW File="MSVCRTD.DLL" Component_="MSVCRTD.DLL" FileName="MSVCRTD.DLL" Attributes="0" SourcePath="..\atrader_release\MSVCRTD.DLL" SelfReg="false"/>
-    <ROW File="msxml4.dll" Component_="msxml4.dll" FileName="msxml4.dll" Attributes="0" SourcePath="..\atrader_release\msxml4.dll" SelfReg="false"/>
-    <ROW File="priv.key" Component_="autotraderdisclaimer.doc" FileName="priv.key" Attributes="0" SourcePath="..\atrader_release\priv.key" SelfReg="false"/>
-    <ROW File="readme2.txt" Component_="autotraderdisclaimer.doc" FileName="readme2.txt" Attributes="0" SourcePath="..\atrader_release\readme2.txt" SelfReg="false"/>
-    <ROW File="splash.bmp" Component_="autotraderdisclaimer.doc" FileName="splash.bmp" Attributes="0" SourcePath="..\atrader_release\splash.bmp" SelfReg="false"/>
-    <ROW File="TAPriceEngineAPI.dll" Component_="TAPriceEngineAPI.dll" FileName="TAPRIC~1.DLL|TAPriceEngineAPI.dll" Attributes="0" SourcePath="..\atrader_release\TAPriceEngineAPI.dll" SelfReg="false"/>
-    <ROW File="Trader.exe" Component_="Trader.exe" FileName="Trader.exe" Attributes="0" SourcePath="..\atrader_release\Trader.exe" SelfReg="false" DigSign="true"/>
-    <ROW File="UT.dll" Component_="UT.dll" FileName="UT.dll" Attributes="0" SourcePath="..\atrader_release\UT.dll" SelfReg="false"/>
-    <ROW File="util.dll" Component_="util.dll" FileName="util.dll" Attributes="0" SourcePath="..\atrader_release\util.dll" SelfReg="false"/>
-    <ROW File="xercesc_3_0.dll" Component_="xercesc_3_0.dll" FileName="XERCES~1.DLL|xerces-c_3_0.dll" Attributes="0" SourcePath="..\atrader_release\xerces-c_3_0.dll" SelfReg="false"/>
-    <ROW File="zlib1.dll" Component_="zlib1.dll" FileName="zlib1.dll" Attributes="0" SourcePath="..\atrader_release\zlib1.dll" SelfReg="false"/>
-    <ROW File="zlibwapi.dll" Component_="zlibwapi.dll" FileName="zlibwapi.dll" Attributes="0" SourcePath="..\atrader_release\zlibwapi.dll" SelfReg="false"/>
-    <ROW File="auth.cert" Component_="auth.cert" FileName="AUTH~1.CER|auth.cert" Attributes="0" SourcePath="..\atrader_release\cert\auth.cert" SelfReg="false"/>
-    <ROW File="client.cert" Component_="auth.cert" FileName="CLIENT~1.CER|client.cert" Attributes="0" SourcePath="..\atrader_release\cert\client.cert" SelfReg="false"/>
-    <ROW File="client.key" Component_="auth.cert" FileName="client.key" Attributes="0" SourcePath="..\atrader_release\cert\client.key" SelfReg="false"/>
-    <ROW File="readme.txt" Component_="readme.txt" FileName="readme.txt" Attributes="0" SourcePath="..\atrader_release\crashreports\readme.txt" SelfReg="false"/>
-    <ROW File="INTRA_20Day_ES_GlobexSession_IB.bar" Component_="INTRA_20Day_ES_GlobexSession_IB.bar" FileName="INTRA_~1.BAR|INTRA_20Day_ES_Globex-Session_IB.bar" Attributes="0" SourcePath="..\atrader_release\data\historical\bar\INTRA_20Day_ES_Globex-Session_IB.bar" SelfReg="false"/>
-    <ROW File="INTRA_20Day_NQ_GlobexSession_IB.bar" Component_="INTRA_20Day_ES_GlobexSession_IB.bar" FileName="INTRA_~2.BAR|INTRA_20Day_NQ_Globex-Session_IB.bar" Attributes="0" SourcePath="..\atrader_release\data\historical\bar\INTRA_20Day_NQ_Globex-Session_IB.bar" SelfReg="false"/>
-    <ROW File="ES_GlobexSession.gaps" Component_="ES_GlobexSession.gaps" FileName="ES_GLO~1.GAP|ES_Globex-Session.gaps" Attributes="0" SourcePath="..\atrader_release\data\historical\gap\ES_Globex-Session.gaps" SelfReg="false"/>
-    <ROW File="ES_GLOBEX.gaps" Component_="ES_GlobexSession.gaps" FileName="ES_GLO~2.GAP|ES_GLOBEX.gaps" Attributes="0" SourcePath="..\atrader_release\data\historical\gap\ES_GLOBEX.gaps" SelfReg="false"/>
-    <ROW File="NQ_GlobexSession.gaps" Component_="ES_GlobexSession.gaps" FileName="NQ_GLO~1.GAP|NQ_Globex-Session.gaps" Attributes="0" SourcePath="..\atrader_release\data\historical\gap\NQ_Globex-Session.gaps" SelfReg="false"/>
-    <ROW File="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="AAPL_G~1.DIS|AAPL_Globex-Session_30_DayOnly_USProfile_Daily.dis" Attributes="0" SourcePath="..\atrader_release\data\historical\profile\AAPL_Globex-Session_30_DayOnly_USProfile_Daily.dis" SelfReg="false"/>
-    <ROW File="AAPL_RTH_30_DayOnly_USProfile_Cummulative.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="AAPL_R~1.DIS|AAPL_RTH_30_DayOnly_USProfile_Cummulative.dis" Attributes="0" SourcePath="..\atrader_release\data\historical\profile\AAPL_RTH_30_DayOnly_USProfile_Cummulative.dis" SelfReg="false"/>
-    <ROW File="AAPL_RTH_30_DayOnly_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="AAPL_R~2.DIS|AAPL_RTH_30_DayOnly_USProfile_Daily.dis" Attributes="0" SourcePath="..\atrader_release\data\historical\profile\AAPL_RTH_30_DayOnly_USProfile_Daily.dis" SelfReg="false"/>
-    <ROW File="AMZN_RTH_30_CombineDayAndNight_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="AMZN_R~1.DIS|AMZN_RTH_30_CombineDayAndNight_USProfile_Daily.dis" Attributes="0" SourcePath="..\atrader_release\data\historical\profile\AMZN_RTH_30_CombineDayAndNight_USProfile_Daily.dis" SelfReg="false"/>
-    <ROW File="AMZN_RTH_30_DayOnly_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="AMZN_R~2.DIS|AMZN_RTH_30_DayOnly_USProfile_Daily.dis" Attributes="0" SourcePath="..\atrader_release\data\historical\profile\AMZN_RTH_30_DayOnly_USProfile_Daily.dis" SelfReg="false"/>
-    <ROW File="ES_GlobexSession_30_SeparateDayAndNight_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="ES_GLO~1.DIS|ES_Globex-Session_30_SeparateDayAndNight_USProfile_Daily.dis" Attributes="0" SourcePath="..\atrader_release\data\historical\profile\ES_Globex-Session_30_SeparateDayAndNight_USProfile_Daily.dis" SelfReg="false"/>
-    <ROW File="ES_GLOBEX_30_CombineDayAndNight_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="ES_GLO~2.DIS|ES_GLOBEX_30_CombineDayAndNight_USProfile_Daily.dis" Attributes="0" SourcePath="..\atrader_release\data\historical\profile\ES_GLOBEX_30_CombineDayAndNight_USProfile_Daily.dis" SelfReg="false"/>
-    <ROW File="ES_GLOBEX_30_SeparateDayAndNight_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="ES_GLO~3.DIS|ES_GLOBEX_30_SeparateDayAndNight_USProfile_Daily.dis" Attributes="0" SourcePath="..\atrader_release\data\historical\profile\ES_GLOBEX_30_SeparateDayAndNight_USProfile_Daily.dis" SelfReg="false"/>
-    <ROW File="colours.h" Component_="colours.h" FileName="colours.h" Attributes="0" SourcePath="..\atrader_release\ext\colours.h" SelfReg="false"/>
-    <ROW File="Constructible.h" Component_="colours.h" FileName="CONSTR~1.H|Constructible.h" Attributes="0" SourcePath="..\atrader_release\ext\Constructible.h" SelfReg="false"/>
-    <ROW File="customobject.cpp" Component_="colours.h" FileName="CUSTOM~1.CPP|customobject.cpp" Attributes="0" SourcePath="..\atrader_release\ext\customobject.cpp" SelfReg="false"/>
-    <ROW File="customobject.h" Component_="colours.h" FileName="CUSTOM~1.H|customobject.h" Attributes="0" SourcePath="..\atrader_release\ext\customobject.h" SelfReg="false"/>
-    <ROW File="ext.def" Component_="colours.h" FileName="ext.def" Attributes="0" SourcePath="..\atrader_release\ext\ext.def" SelfReg="false"/>
-    <ROW File="ext.sln" Component_="colours.h" FileName="ext.sln" Attributes="0" SourcePath="..\atrader_release\ext\ext.sln" SelfReg="false"/>
-    <ROW File="ext.vcproj" Component_="colours.h" FileName="EXT~1.VCP|ext.vcproj" Attributes="0" SourcePath="..\atrader_release\ext\ext.vcproj" SelfReg="false"/>
-    <ROW File="extcciobject.cpp" Component_="colours.h" FileName="EXTCCI~1.CPP|extcciobject.cpp" Attributes="0" SourcePath="..\atrader_release\ext\extcciobject.cpp" SelfReg="false"/>
-    <ROW File="extcciobject.h" Component_="colours.h" FileName="EXTCCI~1.H|extcciobject.h" Attributes="0" SourcePath="..\atrader_release\ext\extcciobject.h" SelfReg="false"/>
-    <ROW File="extdefs.cpp" Component_="colours.h" FileName="extdefs.cpp" Attributes="0" SourcePath="..\atrader_release\ext\extdefs.cpp" SelfReg="false"/>
-    <ROW File="extdefs.h" Component_="colours.h" FileName="extdefs.h" Attributes="0" SourcePath="..\atrader_release\ext\extdefs.h" SelfReg="false"/>
-    <ROW File="extdll.cpp" Component_="colours.h" FileName="extdll.cpp" Attributes="0" SourcePath="..\atrader_release\ext\extdll.cpp" SelfReg="false"/>
-    <ROW File="extdll.h" Component_="colours.h" FileName="extdll.h" Attributes="0" SourcePath="..\atrader_release\ext\extdll.h" SelfReg="false"/>
-    <ROW File="extmovingaverageobject.cpp" Component_="colours.h" FileName="EXTMOV~1.CPP|extmovingaverageobject.cpp" Attributes="0" SourcePath="..\atrader_release\ext\extmovingaverageobject.cpp" SelfReg="false"/>
-    <ROW File="extmovingaverageobject.h" Component_="colours.h" FileName="EXTMOV~1.H|extmovingaverageobject.h" Attributes="0" SourcePath="..\atrader_release\ext\extmovingaverageobject.h" SelfReg="false"/>
-    <ROW File="Factory.cpp" Component_="colours.h" FileName="Factory.cpp" Attributes="0" SourcePath="..\atrader_release\ext\Factory.cpp" SelfReg="false"/>
-    <ROW File="Factory.h" Component_="colours.h" FileName="Factory.h" Attributes="0" SourcePath="..\atrader_release\ext\Factory.h" SelfReg="false"/>
-    <ROW File="StdAfx.cpp" Component_="colours.h" FileName="StdAfx.cpp" Attributes="0" SourcePath="..\atrader_release\ext\StdAfx.cpp" SelfReg="false"/>
-    <ROW File="StdAfx.h" Component_="colours.h" FileName="StdAfx.h" Attributes="0" SourcePath="..\atrader_release\ext\StdAfx.h" SelfReg="false"/>
-    <ROW File="AMEX.txt" Component_="AMEX.txt" FileName="AMEX.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\AMEX.txt" SelfReg="false"/>
-    <ROW File="CBOT.txt" Component_="AMEX.txt" FileName="CBOT.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\CBOT.txt" SelfReg="false"/>
-    <ROW File="CME.txt" Component_="AMEX.txt" FileName="CME.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\CME.txt" SelfReg="false"/>
-    <ROW File="COMEX.txt" Component_="AMEX.txt" FileName="COMEX.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\COMEX.txt" SelfReg="false"/>
-    <ROW File="FOREX.txt" Component_="AMEX.txt" FileName="FOREX.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\FOREX.txt" SelfReg="false"/>
-    <ROW File="Fundamental.txt" Component_="AMEX.txt" FileName="FUNDAM~1.TXT|Fundamental.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\Fundamental.txt" SelfReg="false"/>
-    <ROW File="HKSE.txt" Component_="AMEX.txt" FileName="HKSE.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\HKSE.txt" SelfReg="false"/>
-    <ROW File="INDEX.txt" Component_="AMEX.txt" FileName="INDEX.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\INDEX.txt" SelfReg="false"/>
-    <ROW File="KCBT.txt" Component_="AMEX.txt" FileName="KCBT.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\KCBT.txt" SelfReg="false"/>
-    <ROW File="LSE.txt" Component_="AMEX.txt" FileName="LSE.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\LSE.txt" SelfReg="false"/>
-    <ROW File="MGEX.txt" Component_="AMEX.txt" FileName="MGEX.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\MGEX.txt" SelfReg="false"/>
-    <ROW File="MLSE.txt" Component_="AMEX.txt" FileName="MLSE.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\MLSE.txt" SelfReg="false"/>
-    <ROW File="NASDAQ.txt" Component_="AMEX.txt" FileName="NASDAQ.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\NASDAQ.txt" SelfReg="false"/>
-    <ROW File="NYBOT.txt" Component_="AMEX.txt" FileName="NYBOT.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\NYBOT.txt" SelfReg="false"/>
-    <ROW File="NYMEX.txt" Component_="AMEX.txt" FileName="NYMEX.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\NYMEX.txt" SelfReg="false"/>
-    <ROW File="NYSE.txt" Component_="AMEX.txt" FileName="NYSE.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\NYSE.txt" SelfReg="false"/>
-    <ROW File="OBB.txt" Component_="AMEX.txt" FileName="OBB.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\OBB.txt" SelfReg="false"/>
-    <ROW File="SGX.txt" Component_="AMEX.txt" FileName="SGX.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\SGX.txt" SelfReg="false"/>
-    <ROW File="TSE.txt" Component_="AMEX.txt" FileName="TSE.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\TSE.txt" SelfReg="false"/>
-    <ROW File="USMF.txt" Component_="AMEX.txt" FileName="USMF.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\USMF.txt" SelfReg="false"/>
-    <ROW File="VSE.txt" Component_="AMEX.txt" FileName="VSE.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\VSE.txt" SelfReg="false"/>
-    <ROW File="WCE.txt" Component_="AMEX.txt" FileName="WCE.txt" Attributes="0" SourcePath="..\atrader_release\Instruments\WCE.txt" SelfReg="false"/>
-    <ROW File="DOW_DTN.xml" Component_="DOW_DTN.xml" FileName="DOW_DTN.xml" Attributes="0" SourcePath="..\atrader_release\quoteboards\DOW_DTN.xml" SelfReg="false"/>
-    <ROW File="DOW_IB.xml" Component_="DOW_DTN.xml" FileName="DOW_IB.xml" Attributes="0" SourcePath="..\atrader_release\quoteboards\DOW_IB.xml" SelfReg="false"/>
-    <ROW File="futures_dtn.xml" Component_="DOW_DTN.xml" FileName="FUTURE~1.XML|futures_dtn.xml" Attributes="0" SourcePath="..\atrader_release\quoteboards\futures_dtn.xml" SelfReg="false"/>
-    <ROW File="futures_IB.xml" Component_="DOW_DTN.xml" FileName="FUTURE~2.XML|futures_IB.xml" Attributes="0" SourcePath="..\atrader_release\quoteboards\futures_IB.xml" SelfReg="false"/>
-    <ROW File="futures_TA.xml" Component_="DOW_DTN.xml" FileName="FUTURE~3.XML|futures_TA.xml" Attributes="0" SourcePath="..\atrader_release\quoteboards\futures_TA.xml" SelfReg="false"/>
-    <ROW File="futures_ZENFIRE.xml" Component_="DOW_DTN.xml" FileName="FUTURE~4.XML|futures_ZENFIRE.xml" Attributes="0" SourcePath="..\atrader_release\quoteboards\futures_ZENFIRE.xml" SelfReg="false"/>
-    <ROW File="INDEXES_DTN.xml" Component_="DOW_DTN.xml" FileName="INDEXE~1.XML|INDEXES_DTN.xml" Attributes="0" SourcePath="..\atrader_release\quoteboards\INDEXES_DTN.xml" SelfReg="false"/>
-    <ROW File="INDEXES_DTN_TICKTRIN.xml" Component_="DOW_DTN.xml" FileName="INDEXE~2.XML|INDEXES_DTN_TICKTRIN.xml" Attributes="0" SourcePath="..\atrader_release\quoteboards\INDEXES_DTN_TICKTRIN.xml" SelfReg="false"/>
-    <ROW File="indexes_IB.xml" Component_="DOW_DTN.xml" FileName="INDEXE~3.XML|indexes_IB.xml" Attributes="0" SourcePath="..\atrader_release\quoteboards\indexes_IB.xml" SelfReg="false"/>
-    <ROW File="SOX_IB.xml" Component_="DOW_DTN.xml" FileName="SOX_IB.xml" Attributes="0" SourcePath="..\atrader_release\quoteboards\SOX_IB.xml" SelfReg="false"/>
-    <ROW File="TECH_dtn.xml" Component_="DOW_DTN.xml" FileName="TECH_dtn.xml" Attributes="0" SourcePath="..\atrader_release\quoteboards\TECH_dtn.xml" SelfReg="false"/>
-    <ROW File="TECH_IB.xml" Component_="DOW_DTN.xml" FileName="TECH_IB.xml" Attributes="0" SourcePath="..\atrader_release\quoteboards\TECH_IB.xml" SelfReg="false"/>
-    <ROW File="buy_3leg.str" Component_="buy_3leg.str" FileName="buy_3leg.str" Attributes="0" SourcePath="..\atrader_release\strategies\buy_3leg.str" SelfReg="false"/>
-    <ROW File="sell_3leg.str" Component_="buy_3leg.str" FileName="SELL_3~1.STR|sell_3leg.str" Attributes="0" SourcePath="..\atrader_release\strategies\sell_3leg.str" SelfReg="false"/>
-    <ROW File="AlgoDefinitions.xml" Component_="AlgoDefinitions.xml" FileName="ALGODE~1.XML|AlgoDefinitions.xml" Attributes="0" SourcePath="..\atrader_release\xml\AlgoDefinitions.xml" SelfReg="false"/>
-    <ROW File="Columns.XML" Component_="AlgoDefinitions.xml" FileName="Columns.XML" Attributes="0" SourcePath="..\atrader_release\xml\Columns.XML" SelfReg="false"/>
-    <ROW File="ColumnsIndexes.XML" Component_="AlgoDefinitions.xml" FileName="COLUMN~1.XML|ColumnsIndexes.XML" Attributes="0" SourcePath="..\atrader_release\xml\ColumnsIndexes.XML" SelfReg="false"/>
-    <ROW File="DataFeeds.xml" Component_="AlgoDefinitions.xml" FileName="DATAFE~1.XML|DataFeeds.xml" Attributes="0" SourcePath="..\atrader_release\xml\DataFeeds.xml" SelfReg="false"/>
-    <ROW File="DTNTickSizes.XML" Component_="AlgoDefinitions.xml" FileName="DTNTIC~1.XML|DTNTickSizes.XML" Attributes="0" SourcePath="..\atrader_release\xml\DTNTickSizes.XML" SelfReg="false"/>
-    <ROW File="Exchanges.xml" Component_="AlgoDefinitions.xml" FileName="EXCHAN~1.XML|Exchanges.xml" Attributes="0" SourcePath="..\atrader_release\xml\Exchanges.xml" SelfReg="false"/>
-    <ROW File="IBTickSizes.XML" Component_="AlgoDefinitions.xml" FileName="IBTICK~1.XML|IBTickSizes.XML" Attributes="0" SourcePath="..\atrader_release\xml\IBTickSizes.XML" SelfReg="false"/>
-    <ROW File="ManagedStrategies.xml" Component_="AlgoDefinitions.xml" FileName="MANAGE~1.XML|ManagedStrategies.xml" Attributes="0" SourcePath="..\atrader_release\xml\ManagedStrategies.xml" SelfReg="false"/>
-    <ROW File="OptionsColumns.XML" Component_="AlgoDefinitions.xml" FileName="OPTION~1.XML|OptionsColumns.XML" Attributes="0" SourcePath="..\atrader_release\xml\OptionsColumns.XML" SelfReg="false"/>
-    <ROW File="sectors.xml" Component_="AlgoDefinitions.xml" FileName="sectors.xml" Attributes="0" SourcePath="..\atrader_release\xml\sectors.xml" SelfReg="false"/>
-    <ROW File="StrategyColumns.XML" Component_="AlgoDefinitions.xml" FileName="STRATE~1.XML|StrategyColumns.XML" Attributes="0" SourcePath="..\atrader_release\xml\StrategyColumns.XML" SelfReg="false"/>
-    <ROW File="StrategyDefinitions.xml" Component_="AlgoDefinitions.xml" FileName="STRATE~2.XML|StrategyDefinitions.xml" Attributes="0" SourcePath="..\atrader_release\xml\StrategyDefinitions.xml" SelfReg="false"/>
-    <ROW File="StrategySecurities.xml" Component_="AlgoDefinitions.xml" FileName="STRATE~3.XML|StrategySecurities.xml" Attributes="0" SourcePath="..\atrader_release\xml\StrategySecurities.xml" SelfReg="false"/>
-    <ROW File="IB_tradersettings.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~1.DAT|IB_tradersettings.dat" Attributes="0" SourcePath="..\atrader_release\dat\IB\IB_tradersettings.dat" SelfReg="false"/>
-    <ROW File="applog.txt" Component_="applog.txt" FileName="applog.txt" Attributes="0" SourcePath="..\atrader_release\log\applog.txt" SelfReg="false"/>
+    <ROW File="readme2.txt" Component_="autotraderdisclaimer.doc" FileName="readme2.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\readme2.txt" SelfReg="false"/>
+    <ROW File="auth.cert" Component_="auth.cert" FileName="AUTH~1.CER|auth.cert" Attributes="0" SourcePath="..\..\dev\atrader_release\cert\auth.cert" SelfReg="false"/>
+    <ROW File="client.cert" Component_="auth.cert" FileName="CLIENT~1.CER|client.cert" Attributes="0" SourcePath="..\..\dev\atrader_release\cert\client.cert" SelfReg="false"/>
+    <ROW File="client.key" Component_="auth.cert" FileName="client.key" Attributes="0" SourcePath="..\..\dev\atrader_release\cert\client.key" SelfReg="false"/>
+    <ROW File="readme.txt" Component_="readme.txt" FileName="readme.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\crashreports\readme.txt" SelfReg="false"/>
+    <ROW File="IB_tradersettings.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~1.DAT|IB_tradersettings.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings.dat" SelfReg="false"/>
+    <ROW File="IB_tradersettings_profile.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~3.DAT|IB_tradersettings_profile.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings_profile.dat" SelfReg="false"/>
+    <ROW File="INTRA_20Day_ES_GlobexSession_IB.bar" Component_="INTRA_20Day_ES_GlobexSession_IB.bar" FileName="INTRA_~1.BAR|INTRA_20Day_ES_Globex-Session_IB.bar" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\bar\INTRA_20Day_ES_Globex-Session_IB.bar" SelfReg="false"/>
+    <ROW File="INTRA_20Day_NQ_GlobexSession_IB.bar" Component_="INTRA_20Day_ES_GlobexSession_IB.bar" FileName="INTRA_~2.BAR|INTRA_20Day_NQ_Globex-Session_IB.bar" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\bar\INTRA_20Day_NQ_Globex-Session_IB.bar" SelfReg="false"/>
+    <ROW File="ES_GlobexSession.gaps" Component_="ES_GlobexSession.gaps" FileName="ES_GLO~1.GAP|ES_Globex-Session.gaps" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\gap\ES_Globex-Session.gaps" SelfReg="false"/>
+    <ROW File="ES_GLOBEX.gaps" Component_="ES_GlobexSession.gaps" FileName="ES_GLO~2.GAP|ES_GLOBEX.gaps" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\gap\ES_GLOBEX.gaps" SelfReg="false"/>
+    <ROW File="NQ_GlobexSession.gaps" Component_="ES_GlobexSession.gaps" FileName="NQ_GLO~1.GAP|NQ_Globex-Session.gaps" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\gap\NQ_Globex-Session.gaps" SelfReg="false"/>
+    <ROW File="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="AAPL_G~1.DIS|AAPL_Globex-Session_30_DayOnly_USProfile_Daily.dis" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\profile\AAPL_Globex-Session_30_DayOnly_USProfile_Daily.dis" SelfReg="false"/>
+    <ROW File="AAPL_RTH_30_DayOnly_USProfile_Cummulative.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="AAPL_R~1.DIS|AAPL_RTH_30_DayOnly_USProfile_Cummulative.dis" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\profile\AAPL_RTH_30_DayOnly_USProfile_Cummulative.dis" SelfReg="false"/>
+    <ROW File="AAPL_RTH_30_DayOnly_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="AAPL_R~2.DIS|AAPL_RTH_30_DayOnly_USProfile_Daily.dis" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\profile\AAPL_RTH_30_DayOnly_USProfile_Daily.dis" SelfReg="false"/>
+    <ROW File="AMZN_RTH_30_CombineDayAndNight_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="AMZN_R~1.DIS|AMZN_RTH_30_CombineDayAndNight_USProfile_Daily.dis" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\profile\AMZN_RTH_30_CombineDayAndNight_USProfile_Daily.dis" SelfReg="false"/>
+    <ROW File="AMZN_RTH_30_DayOnly_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="AMZN_R~2.DIS|AMZN_RTH_30_DayOnly_USProfile_Daily.dis" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\profile\AMZN_RTH_30_DayOnly_USProfile_Daily.dis" SelfReg="false"/>
+    <ROW File="ES_GlobexSession_30_SeparateDayAndNight_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="ES_GLO~1.DIS|ES_Globex-Session_30_SeparateDayAndNight_USProfile_Daily.dis" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\profile\ES_Globex-Session_30_SeparateDayAndNight_USProfile_Daily.dis" SelfReg="false"/>
+    <ROW File="ES_GLOBEX_30_CombineDayAndNight_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="ES_GLO~2.DIS|ES_GLOBEX_30_CombineDayAndNight_USProfile_Daily.dis" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\profile\ES_GLOBEX_30_CombineDayAndNight_USProfile_Daily.dis" SelfReg="false"/>
+    <ROW File="ES_GLOBEX_30_SeparateDayAndNight_USProfile_Daily.dis" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis" FileName="ES_GLO~3.DIS|ES_GLOBEX_30_SeparateDayAndNight_USProfile_Daily.dis" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\profile\ES_GLOBEX_30_SeparateDayAndNight_USProfile_Daily.dis" SelfReg="false"/>
+    <ROW File="colours.h" Component_="colours.h" FileName="colours.h" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\colours.h" SelfReg="false"/>
+    <ROW File="Constructible.h" Component_="colours.h" FileName="CONSTR~1.H|Constructible.h" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\Constructible.h" SelfReg="false"/>
+    <ROW File="customobject.cpp" Component_="colours.h" FileName="CUSTOM~1.CPP|customobject.cpp" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\customobject.cpp" SelfReg="false"/>
+    <ROW File="customobject.h" Component_="colours.h" FileName="CUSTOM~1.H|customobject.h" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\customobject.h" SelfReg="false"/>
+    <ROW File="ext.def" Component_="colours.h" FileName="ext.def" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\ext.def" SelfReg="false"/>
+    <ROW File="ext.sln" Component_="colours.h" FileName="ext.sln" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\ext.sln" SelfReg="false"/>
+    <ROW File="ext.vcproj" Component_="colours.h" FileName="EXT~1.VCP|ext.vcproj" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\ext.vcproj" SelfReg="false"/>
+    <ROW File="extcciobject.cpp" Component_="colours.h" FileName="EXTCCI~1.CPP|extcciobject.cpp" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\extcciobject.cpp" SelfReg="false"/>
+    <ROW File="extcciobject.h" Component_="colours.h" FileName="EXTCCI~1.H|extcciobject.h" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\extcciobject.h" SelfReg="false"/>
+    <ROW File="extdefs.cpp" Component_="colours.h" FileName="extdefs.cpp" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\extdefs.cpp" SelfReg="false"/>
+    <ROW File="extdefs.h" Component_="colours.h" FileName="extdefs.h" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\extdefs.h" SelfReg="false"/>
+    <ROW File="extdll.cpp" Component_="colours.h" FileName="extdll.cpp" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\extdll.cpp" SelfReg="false"/>
+    <ROW File="extdll.h" Component_="colours.h" FileName="extdll.h" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\extdll.h" SelfReg="false"/>
+    <ROW File="extmovingaverageobject.cpp" Component_="colours.h" FileName="EXTMOV~1.CPP|extmovingaverageobject.cpp" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\extmovingaverageobject.cpp" SelfReg="false"/>
+    <ROW File="extmovingaverageobject.h" Component_="colours.h" FileName="EXTMOV~1.H|extmovingaverageobject.h" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\extmovingaverageobject.h" SelfReg="false"/>
+    <ROW File="Factory.cpp" Component_="colours.h" FileName="Factory.cpp" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\Factory.cpp" SelfReg="false"/>
+    <ROW File="Factory.h" Component_="colours.h" FileName="Factory.h" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\Factory.h" SelfReg="false"/>
+    <ROW File="StdAfx.cpp" Component_="colours.h" FileName="StdAfx.cpp" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\StdAfx.cpp" SelfReg="false"/>
+    <ROW File="StdAfx.h" Component_="colours.h" FileName="StdAfx.h" Attributes="0" SourcePath="..\..\dev\atrader_release\ext\StdAfx.h" SelfReg="false"/>
+    <ROW File="AMEX.txt" Component_="AMEX.txt" FileName="AMEX.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\AMEX.txt" SelfReg="false"/>
+    <ROW File="CBOT.txt" Component_="AMEX.txt" FileName="CBOT.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\CBOT.txt" SelfReg="false"/>
+    <ROW File="CME.txt" Component_="AMEX.txt" FileName="CME.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\CME.txt" SelfReg="false"/>
+    <ROW File="COMEX.txt" Component_="AMEX.txt" FileName="COMEX.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\COMEX.txt" SelfReg="false"/>
+    <ROW File="FOREX.txt" Component_="AMEX.txt" FileName="FOREX.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\FOREX.txt" SelfReg="false"/>
+    <ROW File="Fundamental.txt" Component_="AMEX.txt" FileName="FUNDAM~1.TXT|Fundamental.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\Fundamental.txt" SelfReg="false"/>
+    <ROW File="HKSE.txt" Component_="AMEX.txt" FileName="HKSE.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\HKSE.txt" SelfReg="false"/>
+    <ROW File="INDEX.txt" Component_="AMEX.txt" FileName="INDEX.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\INDEX.txt" SelfReg="false"/>
+    <ROW File="KCBT.txt" Component_="AMEX.txt" FileName="KCBT.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\KCBT.txt" SelfReg="false"/>
+    <ROW File="LSE.txt" Component_="AMEX.txt" FileName="LSE.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\LSE.txt" SelfReg="false"/>
+    <ROW File="MGEX.txt" Component_="AMEX.txt" FileName="MGEX.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\MGEX.txt" SelfReg="false"/>
+    <ROW File="MLSE.txt" Component_="AMEX.txt" FileName="MLSE.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\MLSE.txt" SelfReg="false"/>
+    <ROW File="NASDAQ.txt" Component_="AMEX.txt" FileName="NASDAQ.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\NASDAQ.txt" SelfReg="false"/>
+    <ROW File="NYBOT.txt" Component_="AMEX.txt" FileName="NYBOT.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\NYBOT.txt" SelfReg="false"/>
+    <ROW File="NYMEX.txt" Component_="AMEX.txt" FileName="NYMEX.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\NYMEX.txt" SelfReg="false"/>
+    <ROW File="NYSE.txt" Component_="AMEX.txt" FileName="NYSE.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\NYSE.txt" SelfReg="false"/>
+    <ROW File="OBB.txt" Component_="AMEX.txt" FileName="OBB.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\OBB.txt" SelfReg="false"/>
+    <ROW File="SGX.txt" Component_="AMEX.txt" FileName="SGX.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\SGX.txt" SelfReg="false"/>
+    <ROW File="TSE.txt" Component_="AMEX.txt" FileName="TSE.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\TSE.txt" SelfReg="false"/>
+    <ROW File="USMF.txt" Component_="AMEX.txt" FileName="USMF.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\USMF.txt" SelfReg="false"/>
+    <ROW File="VSE.txt" Component_="AMEX.txt" FileName="VSE.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\VSE.txt" SelfReg="false"/>
+    <ROW File="WCE.txt" Component_="AMEX.txt" FileName="WCE.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\Instruments\WCE.txt" SelfReg="false"/>
+    <ROW File="applog.txt" Component_="applog.txt" FileName="applog.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\log\applog.txt" SelfReg="false"/>
+    <ROW File="DOW_DTN.xml" Component_="DOW_DTN.xml" FileName="DOW_DTN.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\quoteboards\DOW_DTN.xml" SelfReg="false"/>
+    <ROW File="DOW_IB.xml" Component_="DOW_DTN.xml" FileName="DOW_IB.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\quoteboards\DOW_IB.xml" SelfReg="false"/>
+    <ROW File="futures_dtn.xml" Component_="DOW_DTN.xml" FileName="FUTURE~1.XML|futures_dtn.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\quoteboards\futures_dtn.xml" SelfReg="false"/>
+    <ROW File="futures_IB.xml" Component_="DOW_DTN.xml" FileName="FUTURE~2.XML|futures_IB.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\quoteboards\futures_IB.xml" SelfReg="false"/>
+    <ROW File="futures_TA.xml" Component_="DOW_DTN.xml" FileName="FUTURE~3.XML|futures_TA.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\quoteboards\futures_TA.xml" SelfReg="false"/>
+    <ROW File="futures_ZENFIRE.xml" Component_="DOW_DTN.xml" FileName="FUTURE~4.XML|futures_ZENFIRE.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\quoteboards\futures_ZENFIRE.xml" SelfReg="false"/>
+    <ROW File="INDEXES_DTN.xml" Component_="DOW_DTN.xml" FileName="INDEXE~1.XML|INDEXES_DTN.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\quoteboards\INDEXES_DTN.xml" SelfReg="false"/>
+    <ROW File="INDEXES_DTN_TICKTRIN.xml" Component_="DOW_DTN.xml" FileName="INDEXE~2.XML|INDEXES_DTN_TICKTRIN.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\quoteboards\INDEXES_DTN_TICKTRIN.xml" SelfReg="false"/>
+    <ROW File="indexes_IB.xml" Component_="DOW_DTN.xml" FileName="INDEXE~3.XML|indexes_IB.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\quoteboards\indexes_IB.xml" SelfReg="false"/>
+    <ROW File="SOX_IB.xml" Component_="DOW_DTN.xml" FileName="SOX_IB.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\quoteboards\SOX_IB.xml" SelfReg="false"/>
+    <ROW File="TECH_dtn.xml" Component_="DOW_DTN.xml" FileName="TECH_dtn.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\quoteboards\TECH_dtn.xml" SelfReg="false"/>
+    <ROW File="TECH_IB.xml" Component_="DOW_DTN.xml" FileName="TECH_IB.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\quoteboards\TECH_IB.xml" SelfReg="false"/>
+    <ROW File="buy_3leg.str" Component_="buy_3leg.str" FileName="buy_3leg.str" Attributes="0" SourcePath="..\..\dev\atrader_release\strategies\buy_3leg.str" SelfReg="false"/>
+    <ROW File="sell_3leg.str" Component_="buy_3leg.str" FileName="SELL_3~1.STR|sell_3leg.str" Attributes="0" SourcePath="..\..\dev\atrader_release\strategies\sell_3leg.str" SelfReg="false"/>
+    <ROW File="AlgoDefinitions.xml" Component_="AlgoDefinitions.xml" FileName="ALGODE~1.XML|AlgoDefinitions.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\xml\AlgoDefinitions.xml" SelfReg="false"/>
+    <ROW File="Columns.XML" Component_="AlgoDefinitions.xml" FileName="Columns.XML" Attributes="0" SourcePath="..\..\dev\atrader_release\xml\Columns.XML" SelfReg="false"/>
+    <ROW File="ColumnsIndexes.XML" Component_="AlgoDefinitions.xml" FileName="COLUMN~1.XML|ColumnsIndexes.XML" Attributes="0" SourcePath="..\..\dev\atrader_release\xml\ColumnsIndexes.XML" SelfReg="false"/>
+    <ROW File="DataFeeds.xml" Component_="AlgoDefinitions.xml" FileName="DATAFE~1.XML|DataFeeds.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\xml\DataFeeds.xml" SelfReg="false"/>
+    <ROW File="DTNTickSizes.XML" Component_="AlgoDefinitions.xml" FileName="DTNTIC~1.XML|DTNTickSizes.XML" Attributes="0" SourcePath="..\..\dev\atrader_release\xml\DTNTickSizes.XML" SelfReg="false"/>
+    <ROW File="Exchanges.xml" Component_="AlgoDefinitions.xml" FileName="EXCHAN~1.XML|Exchanges.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\xml\Exchanges.xml" SelfReg="false"/>
+    <ROW File="IBTickSizes.XML" Component_="AlgoDefinitions.xml" FileName="IBTICK~1.XML|IBTickSizes.XML" Attributes="0" SourcePath="..\..\dev\atrader_release\xml\IBTickSizes.XML" SelfReg="false"/>
+    <ROW File="ManagedStrategies.xml" Component_="AlgoDefinitions.xml" FileName="MANAGE~1.XML|ManagedStrategies.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\xml\ManagedStrategies.xml" SelfReg="false"/>
+    <ROW File="OptionsColumns.XML" Component_="AlgoDefinitions.xml" FileName="OPTION~1.XML|OptionsColumns.XML" Attributes="0" SourcePath="..\..\dev\atrader_release\xml\OptionsColumns.XML" SelfReg="false"/>
+    <ROW File="sectors.xml" Component_="AlgoDefinitions.xml" FileName="sectors.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\xml\sectors.xml" SelfReg="false"/>
+    <ROW File="StrategyColumns.XML" Component_="AlgoDefinitions.xml" FileName="STRATE~1.XML|StrategyColumns.XML" Attributes="0" SourcePath="..\..\dev\atrader_release\xml\StrategyColumns.XML" SelfReg="false"/>
+    <ROW File="StrategyDefinitions.xml" Component_="AlgoDefinitions.xml" FileName="STRATE~2.XML|StrategyDefinitions.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\xml\StrategyDefinitions.xml" SelfReg="false"/>
+    <ROW File="StrategySecurities.xml" Component_="AlgoDefinitions.xml" FileName="STRATE~3.XML|StrategySecurities.xml" Attributes="0" SourcePath="..\..\dev\atrader_release\xml\StrategySecurities.xml" SelfReg="false"/>
+    <ROW File="aesc.dll" Component_="aesc.dll" FileName="aesc.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\aesc.dll" SelfReg="false"/>
+    <ROW File="autotraderdisclaimer.doc" Component_="autotraderdisclaimer.doc" FileName="AUTOTR~1.DOC|autotraderdisclaimer.doc" Attributes="0" SourcePath="..\..\dev\atrader_release\autotraderdisclaimer.doc" SelfReg="false"/>
+    <ROW File="boost_threadvc90mt1_39.dll" Component_="boost_threadvc90mt1_39.dll" FileName="BOOST_~1.DLL|boost_thread-vc90-mt-1_39.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\boost_thread-vc90-mt-1_39.dll" SelfReg="false"/>
+    <ROW File="CPPTABackFillServerAPI.dll" Component_="CPPTABackFillServerAPI.dll" FileName="CPPTAB~1.DLL|CPPTABackFillServerAPI.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\CPPTABackFillServerAPI.dll" SelfReg="false"/>
+    <ROW File="crashcon.exe" Component_="crashcon.exe" FileName="crashcon.exe" Attributes="0" SourcePath="..\..\dev\atrader_release\crashcon.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="CrashRpt.dll" Component_="CrashRpt.dll" FileName="CrashRpt.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\CrashRpt.dll" SelfReg="false"/>
+    <ROW File="CrashSender.exe" Component_="CrashSender.exe" FileName="CRASHS~1.EXE|CrashSender.exe" Attributes="0" SourcePath="..\..\dev\atrader_release\CrashSender.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="DBGHELP.DLL" Component_="DBGHELP.DLL" FileName="DBGHELP.DLL" Attributes="0" SourcePath="..\..\dev\atrader_release\DBGHELP.DLL" SelfReg="false"/>
+    <ROW File="DeleteWorkspaces.bat" Component_="autotraderdisclaimer.doc" FileName="DELETE~1.BAT|DeleteWorkspaces.bat" Attributes="0" SourcePath="..\..\dev\atrader_release\DeleteWorkspaces.bat" SelfReg="false"/>
+    <ROW File="emini_manual.doc" Component_="autotraderdisclaimer.doc" FileName="EMINI_~1.DOC|emini_manual.doc" Attributes="0" SourcePath="..\..\dev\atrader_release\emini_manual.doc" SelfReg="false"/>
+    <ROW File="emini_manual.pdf" Component_="autotraderdisclaimer.doc" FileName="EMINI_~1.PDF|emini_manual.pdf" Attributes="0" SourcePath="..\..\dev\atrader_release\emini_manual.pdf" SelfReg="false"/>
+    <ROW File="eula.txt" Component_="autotraderdisclaimer.doc" FileName="eula.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\eula.txt" SelfReg="false"/>
+    <ROW File="manual.doc" Component_="autotraderdisclaimer.doc" FileName="manual.doc" Attributes="0" SourcePath="..\..\dev\atrader_release\manual.doc" SelfReg="false"/>
+    <ROW File="manual.pdf" Component_="autotraderdisclaimer.doc" FileName="manual.pdf" Attributes="0" SourcePath="..\..\dev\atrader_release\manual.pdf" SelfReg="false"/>
+    <ROW File="mmath.xls" Component_="autotraderdisclaimer.doc" FileName="mmath.xls" Attributes="0" SourcePath="..\..\dev\atrader_release\mmath.xls" SelfReg="false"/>
+    <ROW File="msvcrt.dll" Component_="msvcrt.dll" FileName="msvcrt.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\msvcrt.dll" SelfReg="false"/>
+    <ROW File="MSVCRTD.DLL" Component_="MSVCRTD.DLL" FileName="MSVCRTD.DLL" Attributes="0" SourcePath="..\..\dev\atrader_release\MSVCRTD.DLL" SelfReg="false"/>
+    <ROW File="msxml4.dll" Component_="msxml4.dll" FileName="msxml4.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\msxml4.dll" SelfReg="false"/>
+    <ROW File="priv.key" Component_="autotraderdisclaimer.doc" FileName="priv.key" Attributes="0" SourcePath="..\..\dev\atrader_release\priv.key" SelfReg="false"/>
+    <ROW File="splash.bmp" Component_="autotraderdisclaimer.doc" FileName="splash.bmp" Attributes="0" SourcePath="..\..\dev\atrader_release\splash.bmp" SelfReg="false"/>
+    <ROW File="TAPriceEngineAPI.dll" Component_="TAPriceEngineAPI.dll" FileName="TAPRIC~1.DLL|TAPriceEngineAPI.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\TAPriceEngineAPI.dll" SelfReg="false"/>
+    <ROW File="UT.dll" Component_="UT.dll" FileName="UT.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\UT.dll" SelfReg="false"/>
+    <ROW File="xercesc_3_0.dll" Component_="xercesc_3_0.dll" FileName="XERCES~1.DLL|xerces-c_3_0.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\xerces-c_3_0.dll" SelfReg="false"/>
+    <ROW File="zlib1.dll" Component_="zlib1.dll" FileName="zlib1.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\zlib1.dll" SelfReg="false"/>
+    <ROW File="zlibwapi.dll" Component_="zlibwapi.dll" FileName="zlibwapi.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\zlibwapi.dll" SelfReg="false"/>
+    <ROW File="util.dll" Component_="util.dll" FileName="util.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\util.dll" SelfReg="false"/>
+    <ROW File="Trader.exe" Component_="Trader.exe" FileName="Trader.exe" Attributes="0" SourcePath="..\..\dev\atrader_release\Trader.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="datafeed.dll" Component_="datafeed.dll" FileName="datafeed.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\datafeed.dll" SelfReg="false"/>
+    <ROW File="ext.dll" Component_="ext.dll" FileName="ext.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\ext.dll" SelfReg="false"/>
+    <ROW File="atlutils.dll" Component_="atlutils.dll" FileName="atlutils.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\atlutils.dll" SelfReg="false"/>
+    <ROW File="IB_tradersettings_algo.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~5.DAT|IB_tradersettings_algo.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings_algo.dat" SelfReg="false"/>
+    <ROW File="IB_tradersettings_alldata_demo.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~2.DAT|IB_tradersettings_alldata_demo.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings_alldata_demo.dat" SelfReg="false"/>
+    <ROW File="IB_tradersettings_shark.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~4.DAT|IB_tradersettings_shark.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings_shark.dat" SelfReg="false"/>
+    <ROW File="IB_tradersettings_alldata_indicators_demo.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~6.DAT|IB_tradersettings_alldata_indicators_demo.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings_alldata_indicators_demo.dat" SelfReg="false"/>
+    <ROW File="IB_tradersettings_alldata_indicators_demo2.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~7.DAT|IB_tradersettings_alldata_indicators_demo2.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings_alldata_indicators_demo2.dat" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
+    <ROW Name="readme2.txt" Path="[|AI_PROPPATH_PERBUILD_readme2.txt]" Type="2" Content="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -237,6 +248,7 @@
   <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
     <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
     <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="LicenseAgreementDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\LicenseAgreementDlg.aip"/>
     <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
     <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
     <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
@@ -252,10 +264,13 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ROW Dialog_="LicenseAgreementDlg" Control="AgreementText" Type="ScrollableText" X="20" Y="60" Width="330" Height="120" Attributes="7" Text="..\..\dev\atrader_release\autotraderdisclaimer.rtf" Order="400" TextLocId="Control.Text.LicenseAgreementDlg#AgreementText" MsiKey="LicenseAgreementDlg#AgreementText"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
-    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL" Ordering="1"/>
     <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
-    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL" Ordering="1"/>
     <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
     <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
     <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
@@ -275,11 +290,14 @@
     <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
     <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
     <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
     <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
-    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
     <ROW Directory_="QuickLaunch_Dir" Component_="QuickLaunch" ManualDelete="false"/>
+    <ROW Directory_="atrader_Dir" Component_="atrader" ManualDelete="false"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
@@ -299,47 +317,48 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
     <ROW Feature_="MainFeature" Component_="APPDIR"/>
-    <ROW Feature_="MainFeature" Component_="aesc.dll"/>
-    <ROW Feature_="MainFeature" Component_="atlutils.dll"/>
     <ROW Feature_="MainFeature" Component_="autotraderdisclaimer.doc"/>
+    <ROW Feature_="MainFeature" Component_="aesc.dll"/>
     <ROW Feature_="MainFeature" Component_="boost_threadvc90mt1_39.dll"/>
     <ROW Feature_="MainFeature" Component_="CPPTABackFillServerAPI.dll"/>
     <ROW Feature_="MainFeature" Component_="crashcon.exe"/>
     <ROW Feature_="MainFeature" Component_="CrashRpt.dll"/>
     <ROW Feature_="MainFeature" Component_="CrashSender.exe"/>
-    <ROW Feature_="MainFeature" Component_="datafeed.dll"/>
     <ROW Feature_="MainFeature" Component_="DBGHELP.DLL"/>
-    <ROW Feature_="MainFeature" Component_="ext.dll"/>
     <ROW Feature_="MainFeature" Component_="msvcrt.dll"/>
+    <ROW Feature_="MainFeature" Component_="atrader"/>
     <ROW Feature_="MainFeature" Component_="MSVCRTD.DLL"/>
-    <ROW Feature_="MainFeature" Component_="msxml4.dll"/>
-    <ROW Feature_="MainFeature" Component_="TAPriceEngineAPI.dll"/>
-    <ROW Feature_="MainFeature" Component_="Trader.exe"/>
-    <ROW Feature_="MainFeature" Component_="UT.dll"/>
-    <ROW Feature_="MainFeature" Component_="util.dll"/>
-    <ROW Feature_="MainFeature" Component_="xercesc_3_0.dll"/>
-    <ROW Feature_="MainFeature" Component_="zlib1.dll"/>
-    <ROW Feature_="MainFeature" Component_="zlibwapi.dll"/>
-    <ROW Feature_="MainFeature" Component_="auth.cert"/>
-    <ROW Feature_="MainFeature" Component_="readme.txt"/>
-    <ROW Feature_="MainFeature" Component_="INTRA_20Day_ES_GlobexSession_IB.bar"/>
-    <ROW Feature_="MainFeature" Component_="ES_GlobexSession.gaps"/>
-    <ROW Feature_="MainFeature" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis"/>
-    <ROW Feature_="MainFeature" Component_="colours.h"/>
-    <ROW Feature_="MainFeature" Component_="AMEX.txt"/>
-    <ROW Feature_="MainFeature" Component_="DOW_DTN.xml"/>
-    <ROW Feature_="MainFeature" Component_="buy_3leg.str"/>
-    <ROW Feature_="MainFeature" Component_="AlgoDefinitions.xml"/>
     <ROW Feature_="MainFeature" Component_="Initialised"/>
     <ROW Feature_="MainFeature" Component_="ATRADER"/>
-    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="msxml4.dll"/>
     <ROW Feature_="MainFeature" Component_="QuickLaunch"/>
     <ROW Feature_="MainFeature" Component_="RootPath"/>
     <ROW Feature_="MainFeature" Component_="Versions"/>
     <ROW Feature_="MainFeature" Component_="DefaultFuturesMonth"/>
     <ROW Feature_="MainFeature" Component_="Admin"/>
+    <ROW Feature_="MainFeature" Component_="TAPriceEngineAPI.dll"/>
+    <ROW Feature_="MainFeature" Component_="UT.dll"/>
+    <ROW Feature_="MainFeature" Component_="xercesc_3_0.dll"/>
+    <ROW Feature_="MainFeature" Component_="zlib1.dll"/>
+    <ROW Feature_="MainFeature" Component_="zlibwapi.dll"/>
+    <ROW Feature_="MainFeature" Component_="util.dll"/>
+    <ROW Feature_="MainFeature" Component_="Trader.exe"/>
+    <ROW Feature_="MainFeature" Component_="datafeed.dll"/>
+    <ROW Feature_="MainFeature" Component_="ext.dll"/>
+    <ROW Feature_="MainFeature" Component_="auth.cert"/>
+    <ROW Feature_="MainFeature" Component_="readme.txt"/>
     <ROW Feature_="MainFeature" Component_="IB_tradersettings.dat"/>
+    <ROW Feature_="MainFeature" Component_="INTRA_20Day_ES_GlobexSession_IB.bar"/>
+    <ROW Feature_="MainFeature" Component_="ES_GlobexSession.gaps"/>
+    <ROW Feature_="MainFeature" Component_="AAPL_GlobexSession_30_DayOnly_USProfile_Daily.dis"/>
+    <ROW Feature_="MainFeature" Component_="colours.h"/>
+    <ROW Feature_="MainFeature" Component_="AMEX.txt"/>
     <ROW Feature_="MainFeature" Component_="applog.txt"/>
+    <ROW Feature_="MainFeature" Component_="DOW_DTN.xml"/>
+    <ROW Feature_="MainFeature" Component_="buy_3leg.str"/>
+    <ROW Feature_="MainFeature" Component_="AlgoDefinitions.xml"/>
+    <ROW Feature_="MainFeature" Component_="atlutils.dll"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
@@ -371,13 +390,13 @@
     <ROW Registry="Others" Root="1" Key="Software\ATRADER\Others" Name="\"/>
     <ROW Registry="RootPath" Root="1" Key="Software\ATRADER\Files" Name="RootPath" Value="[atrader_Dir]" Component_="RootPath"/>
     <ROW Registry="Software" Root="1" Key="Software" Name="\"/>
-    <ROW Registry="Versions" Root="1" Key="Software\ATRADER" Name="Version" Value="3.1" Component_="Versions"/>
+    <ROW Registry="Versions" Root="1" Key="Software\ATRADER" Name="Version" Value="3.1.5" Component_="Versions"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="Trader" Directory_="SHORTCUTDIR" Name="Trader" Component_="Trader.exe" Target="[#Trader.exe]" Description="Run ATrader Interactive Charting and Trading Software" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
-    <ROW Shortcut="Trader_1" Directory_="DesktopFolder" Name="Trader" Component_="Trader.exe" Target="[#Trader.exe]" Description="Run ATrader Interactive Charting and Trading Software" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
-    <ROW Shortcut="Trader_2" Directory_="QuickLaunch_Dir" Name="Trader" Component_="Trader.exe" Target="[#Trader.exe]" Description="Run ATrader Interactive Charting and Trading Software" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
-    <ROW Shortcut="Trader_3" Directory_="StartMenuFolder" Name="Trader" Component_="Trader.exe" Target="[#Trader.exe]" Description="Run ATrader Interactive Charting and Trading Software" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Trader" Directory_="SHORTCUTDIR" Name="Trader" Component_="Trader.exe" Target="[#Trader.exe]" Description="Run ATrader Interactive Charting" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Trader_1" Directory_="DesktopFolder" Name="Trader" Component_="Trader.exe" Target="[#Trader.exe]" Description="Run ATrader Interactive Charting" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Trader_2" Directory_="QuickLaunch_Dir" Name="Trader" Component_="Trader.exe" Target="[#Trader.exe]" Description="Run ATrader Interactive Charting" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Trader_3" Directory_="StartMenuFolder" Name="Trader" Component_="Trader.exe" Target="[#Trader.exe]" Description="Run ATrader Interactive Charting" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>
