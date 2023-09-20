@@ -15,7 +15,7 @@
     <ROW Property="ProductCode" Value="2057:{BA3379A5-68E3-4AA5-BBFD-FA5083E849A2} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="ATRADER"/>
-    <ROW Property="ProductVersion" Value="3.1.5"/>
+    <ROW Property="ProductVersion" Value="3.1.6"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{E4C62E4C-DD72-4F44-93D2-A225B238FE9D}"/>
     <ROW Property="VIEWREADME" Value="1" Type="4"/>
@@ -390,7 +390,7 @@
     <ROW Registry="Others" Root="1" Key="Software\ATRADER\Others" Name="\"/>
     <ROW Registry="RootPath" Root="1" Key="Software\ATRADER\Files" Name="RootPath" Value="[atrader_Dir]" Component_="RootPath"/>
     <ROW Registry="Software" Root="1" Key="Software" Name="\"/>
-    <ROW Registry="Versions" Root="1" Key="Software\ATRADER" Name="Version" Value="3.1.5" Component_="Versions"/>
+    <ROW Registry="Versions" Root="1" Key="Software\ATRADER" Name="Version" Value="3.1.6" Component_="Versions"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
     <ROW Shortcut="Trader" Directory_="SHORTCUTDIR" Name="Trader" Component_="Trader.exe" Target="[#Trader.exe]" Description="Run ATrader Interactive Charting" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
