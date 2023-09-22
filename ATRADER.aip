@@ -15,7 +15,7 @@
     <ROW Property="ProductCode" Value="2057:{BA3379A5-68E3-4AA5-BBFD-FA5083E849A2} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="ATRADER"/>
-    <ROW Property="ProductVersion" Value="3.1.6"/>
+    <ROW Property="ProductVersion" Value="3.1.7"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{E4C62E4C-DD72-4F44-93D2-A225B238FE9D}"/>
     <ROW Property="VIEWREADME" Value="1" Type="4"/>
@@ -70,7 +70,7 @@
     <ROW Component="DOW_DTN.xml" ComponentId="{CFCAB4F1-9FD6-4ABC-96AD-A0FF69EEBB3B}" Directory_="quoteboards_Dir" Attributes="0" KeyPath="DOW_DTN.xml" Type="0"/>
     <ROW Component="DefaultFuturesMonth" ComponentId="{F9B08B5E-B0D8-42F5-B09C-CC9CEAE2F783}" Directory_="APPDIR" Attributes="4" KeyPath="DefaultFuturesMonth"/>
     <ROW Component="ES_GlobexSession.gaps" ComponentId="{0095DD01-334C-427F-B3C6-5E1C5C5B5181}" Directory_="gap_Dir" Attributes="0" KeyPath="ES_GlobexSession.gaps" Type="0"/>
-    <ROW Component="IB_tradersettings.dat" ComponentId="{215086EC-8A22-40D3-AF7E-29325543C1F8}" Directory_="IB_Dir" Attributes="0" KeyPath="IB_tradersettings.dat" Type="0"/>
+    <ROW Component="IB_tradersettings.dat" ComponentId="{215086EC-8A22-40D3-AF7E-29325543C1F8}" Directory_="IB_Dir" Attributes="0" KeyPath="IB_tradersettings_alldata_indicators_demo.dat" Type="0"/>
     <ROW Component="INTRA_20Day_ES_GlobexSession_IB.bar" ComponentId="{D3A759C6-4C7D-4943-8AEB-B8535B843903}" Directory_="bar_Dir" Attributes="0" KeyPath="INTRA_20Day_ES_GlobexSession_IB.bar" Type="0"/>
     <ROW Component="Initialised" ComponentId="{9AEA265C-D42B-43CB-9B94-9CE9FBFBDA9D}" Directory_="APPDIR" Attributes="4" KeyPath="Initialised"/>
     <ROW Component="MSVCRTD.DLL" ComponentId="{32846DC9-3B38-4912-995C-90453B2B1161}" Directory_="APPDIR" Attributes="0" KeyPath="MSVCRTD.DLL"/>
@@ -111,8 +111,6 @@
     <ROW File="client.cert" Component_="auth.cert" FileName="CLIENT~1.CER|client.cert" Attributes="0" SourcePath="..\..\dev\atrader_release\cert\client.cert" SelfReg="false"/>
     <ROW File="client.key" Component_="auth.cert" FileName="client.key" Attributes="0" SourcePath="..\..\dev\atrader_release\cert\client.key" SelfReg="false"/>
     <ROW File="readme.txt" Component_="readme.txt" FileName="readme.txt" Attributes="0" SourcePath="..\..\dev\atrader_release\crashreports\readme.txt" SelfReg="false"/>
-    <ROW File="IB_tradersettings.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~1.DAT|IB_tradersettings.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings.dat" SelfReg="false"/>
-    <ROW File="IB_tradersettings_profile.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~3.DAT|IB_tradersettings_profile.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings_profile.dat" SelfReg="false"/>
     <ROW File="INTRA_20Day_ES_GlobexSession_IB.bar" Component_="INTRA_20Day_ES_GlobexSession_IB.bar" FileName="INTRA_~1.BAR|INTRA_20Day_ES_Globex-Session_IB.bar" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\bar\INTRA_20Day_ES_Globex-Session_IB.bar" SelfReg="false"/>
     <ROW File="INTRA_20Day_NQ_GlobexSession_IB.bar" Component_="INTRA_20Day_ES_GlobexSession_IB.bar" FileName="INTRA_~2.BAR|INTRA_20Day_NQ_Globex-Session_IB.bar" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\bar\INTRA_20Day_NQ_Globex-Session_IB.bar" SelfReg="false"/>
     <ROW File="ES_GlobexSession.gaps" Component_="ES_GlobexSession.gaps" FileName="ES_GLO~1.GAP|ES_Globex-Session.gaps" Attributes="0" SourcePath="..\..\dev\atrader_release\data\historical\gap\ES_Globex-Session.gaps" SelfReg="false"/>
@@ -225,11 +223,10 @@
     <ROW File="datafeed.dll" Component_="datafeed.dll" FileName="datafeed.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\datafeed.dll" SelfReg="false"/>
     <ROW File="ext.dll" Component_="ext.dll" FileName="ext.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\ext.dll" SelfReg="false"/>
     <ROW File="atlutils.dll" Component_="atlutils.dll" FileName="atlutils.dll" Attributes="0" SourcePath="..\..\dev\atrader_release\atlutils.dll" SelfReg="false"/>
-    <ROW File="IB_tradersettings_algo.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~5.DAT|IB_tradersettings_algo.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings_algo.dat" SelfReg="false"/>
-    <ROW File="IB_tradersettings_alldata_demo.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~2.DAT|IB_tradersettings_alldata_demo.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings_alldata_demo.dat" SelfReg="false"/>
-    <ROW File="IB_tradersettings_shark.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~4.DAT|IB_tradersettings_shark.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings_shark.dat" SelfReg="false"/>
     <ROW File="IB_tradersettings_alldata_indicators_demo.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~6.DAT|IB_tradersettings_alldata_indicators_demo.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings_alldata_indicators_demo.dat" SelfReg="false"/>
-    <ROW File="IB_tradersettings_alldata_indicators_demo2.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~7.DAT|IB_tradersettings_alldata_indicators_demo2.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings_alldata_indicators_demo2.dat" SelfReg="false"/>
+    <ROW File="ES.lyt" Component_="IB_tradersettings.dat" FileName="ES.lyt" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\ES.lyt" SelfReg="false"/>
+    <ROW File="IB_tradersettings.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~1.DAT|IB_tradersettings.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings.dat" SelfReg="false"/>
+    <ROW File="IB_tradersettings_alldata_profile.dat" Component_="IB_tradersettings.dat" FileName="IB_TRA~2.DAT|IB_tradersettings_alldata_profile.dat" Attributes="0" SourcePath="..\..\dev\atrader_release\dat\IB\IB_tradersettings_alldata_profile.dat" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
     <ROW Name="readme2.txt" Path="[|AI_PROPPATH_PERBUILD_readme2.txt]" Type="2" Content="0"/>
@@ -390,7 +387,7 @@
     <ROW Registry="Others" Root="1" Key="Software\ATRADER\Others" Name="\"/>
     <ROW Registry="RootPath" Root="1" Key="Software\ATRADER\Files" Name="RootPath" Value="[atrader_Dir]" Component_="RootPath"/>
     <ROW Registry="Software" Root="1" Key="Software" Name="\"/>
-    <ROW Registry="Versions" Root="1" Key="Software\ATRADER" Name="Version" Value="3.1.6" Component_="Versions"/>
+    <ROW Registry="Versions" Root="1" Key="Software\ATRADER" Name="Version" Value="3.1.7" Component_="Versions"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
     <ROW Shortcut="Trader" Directory_="SHORTCUTDIR" Name="Trader" Component_="Trader.exe" Target="[#Trader.exe]" Description="Run ATrader Interactive Charting" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
